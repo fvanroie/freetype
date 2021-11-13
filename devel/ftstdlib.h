@@ -34,6 +34,7 @@
 
 #include <stddef.h>
 #include "hasp_png.h"
+#include "lv_fs_if.h"
 #include "lv_fs_freetype.h"
 
 #define ft_ptrdiff_t  ptrdiff_t
