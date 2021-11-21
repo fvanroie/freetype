@@ -33,7 +33,7 @@
 
 
 #include <stddef.h>
-#include "hasp_png.h"
+#include "hasp_mem.h"
 #include "lv_fs_if.h"
 #include "lv_fs_freetype.h"
 
@@ -131,10 +131,10 @@
    */
 
 
-#define ft_scalloc   lodepng_calloc
-#define ft_sfree     lodepng_free
-#define ft_smalloc   lodepng_malloc
-#define ft_srealloc  lodepng_realloc
+#define ft_scalloc   hasp_calloc
+#define ft_sfree     hasp_free
+#define ft_smalloc   hasp_malloc
+#define ft_srealloc  hasp_realloc
 
 
   /**************************************************************************
