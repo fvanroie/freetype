@@ -37,7 +37,7 @@
 
 typedef void hasp_FILE;
 
-extern hasp_FILE * lvbe_fopen(const char * filename, const char * mode );
+extern hasp_FILE * lv_ft_fopen(const char * filename, const char * mode );
 extern int lv_ft_fclose(hasp_FILE * stream);
 extern size_t lv_ft_fread(void * ptr, size_t size, size_t count, hasp_FILE * stream);
 extern int lv_ft_fseek(hasp_FILE * stream, long int offset, int origin );
