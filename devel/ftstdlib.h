@@ -34,8 +34,14 @@
 
 #include <stddef.h>
 #include "hasp_mem.h"
-#include "lv_fs_if.h"
-#include "lv_fs_freetype.h"
+
+typedef void hasp_FILE;
+
+extern hasp_FILE * lvbe_fopen(const char * filename, const char * mode );
+extern int lv_ft_fclose(hasp_FILE * stream);
+extern size_t lv_ft_fread(void * ptr, size_t size, size_t count, hasp_FILE * stream);
+extern int lv_ft_fseek(hasp_FILE * stream, long int offset, int origin );
+extern int lv_ft_ftell(hasp_FILE * stream);
 
 #define ft_ptrdiff_t  ptrdiff_t
 
@@ -103,7 +109,7 @@
 
 #include <stdio.h>
 
-#define FT_FILE     lv_ft_stream_t
+#define FT_FILE     hasp_FILE
 #define ft_fclose   lv_ft_fclose
 #define ft_fopen    lv_ft_fopen
 #define ft_fread    lv_ft_fread
